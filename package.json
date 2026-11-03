@@ -1,0 +1,56 @@
+{
+  "name": "dsh-qq-notify",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: get a QQ ping when a task finishes, needs confirmation, or needs discussion",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./transports": "./lib/transports.js"
+  },
+  "bin": {
+    "dsh-qq-notify": "lib/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hangfei404-hub/dsh-qq-notify.git"
+  },
+  "homepage": "https://github.com/hangfei404-hub/dsh-qq-notify#readme",
+  "bugs": {
+    "url": "https://github.com/hangfei404-hub/dsh-qq-notify/issues"
+  },
+  "author": "Hangfei Wu",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/webhook.mjs && node test/credentials.mjs && node test/smtp.mjs",
+    "selfcheck": "node lib/cli.js --help"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "^3.18.5"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis-plugin",
+    "qq",
+    "notification",
+    "onebot",
+    "smtp"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,27 @@
+# 依赖（package-lock.json 要提交，保证 CI 可复现）
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+*.tmp
+tmp/
+.tmp/
+
+# 本地配置与凭证：绝不要提交
+.env
+.env.*
+!.env.example
+*.credentials.yaml
+.credentials*
+secrets.*
+config.local.*
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
